@@ -8,6 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		<module>kafka-learn</module>
+		<module>hystrix-learn</module>
 	</modules>
 	<packaging>pom</packaging>
 
