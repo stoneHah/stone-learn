@@ -2,6 +2,7 @@ package com.zq.learn.hystrix.command;
 
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
+import com.zq.learn.hystrix.utils.SleepUtils;
 import rx.Observable;
 import rx.Subscriber;
 
@@ -24,6 +25,7 @@ public class CommandHelloWorld extends HystrixCommand<String> {
 
     @Override
     protected String run() throws Exception {
+        System.out.println("run hystrix command!!");
         return "Hello " + name + "!";
     }
 
@@ -57,6 +59,7 @@ public class CommandHelloWorld extends HystrixCommand<String> {
             }
         });
 
+        //异步执行
         Observable<String> oc = new CommandHelloWorld("Qun").toObservable();
         oc.subscribe(new Subscriber<String>() {
             @Override
@@ -76,5 +79,7 @@ public class CommandHelloWorld extends HystrixCommand<String> {
         });
 
         System.out.println("all command executed!!!");
+
+        SleepUtils.second(1);
     }
 }
