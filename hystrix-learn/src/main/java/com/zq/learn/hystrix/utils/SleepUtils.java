@@ -1,4 +1,4 @@
-package com.stone.learn.java.utils;
+package com.zq.learn.hystrix.utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,14 +12,6 @@ public class SleepUtils {
     public static void second(long seconds){
         try {
             TimeUnit.SECONDS.sleep(seconds);
-        } catch (InterruptedException e) {
-            //e.printStackTrace();
-        }
-    }
-
-    public static void millSecond(long mill){
-        try {
-            TimeUnit.MILLISECONDS.sleep(mill);
         } catch (InterruptedException e) {
             //e.printStackTrace();
         }
