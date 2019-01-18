@@ -10,6 +10,7 @@
 		<module>kafka-learn</module>
 		<module>hystrix-learn</module>
 		<module>java-learn</module>
+		<module>datastruct</module>
 	</modules>
 	<packaging>pom</packaging>
 
