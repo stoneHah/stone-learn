@@ -1,5 +1,8 @@
 import org.joda.time.DateTime;
 
+import java.math.BigInteger;
+import java.nio.charset.Charset;
+
 /**
  * ${DESCRIPTION}
  *
@@ -8,7 +11,9 @@ import org.joda.time.DateTime;
  **/
 public class Test {
     public static void main(String[] args) {
-        System.out.println(new DateTime(1980,1,1,0,0,0).getMillis());
-        System.out.println(new DateTime(2018,1,1,0,0,0).getMillis());
+        String h = "h";
+        byte[] bytes = h.getBytes(Charset.defaultCharset());
+        System.out.println(new BigInteger(1, bytes).toString(2));
+        System.out.println(Integer.toBinaryString(0xef));
     }
 }
