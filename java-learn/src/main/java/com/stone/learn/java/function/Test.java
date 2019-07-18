@@ -2,7 +2,12 @@ package com.stone.learn.java.function;
 
 import com.sun.tools.javac.comp.Check;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author qun.zheng
@@ -19,6 +24,15 @@ public class Test {
             System.out.println(artist.getName());
             return artist.isFrom("London");
         });
+
+        List<String> list = Stream.of("a", "b", "hello").map(e -> e.toUpperCase())
+                .collect(Collectors.toList());
+        System.out.println(list);
+
+        Stream.of(Arrays.asList(1, 2), Arrays.asList(3, 4))
+                .flatMap(numbers -> numbers.stream())
+                .min(Comparator.comparing(n -> n)).get();
+//                .collect(Collectors.toList());
 
     }
 

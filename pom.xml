@@ -12,7 +12,9 @@
 		<module>java-learn</module>
 		<module>datastruct</module>
 		<module>spring-learn</module>
-	</modules>
+        <module>zk-learn</module>
+        <module>java-concurrent</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>learn</name>
