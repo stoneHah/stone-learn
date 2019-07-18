@@ -1,7 +1,5 @@
 package com.stone.learn.java.function;
 
-import com.sun.tools.javac.comp.Check;
-
 import java.util.function.Predicate;
 
 /**
