@@ -11,9 +11,10 @@ import java.nio.charset.Charset;
  **/
 public class Test {
     public static void main(String[] args) {
-        String h = "h";
+        /*String h = "h";
         byte[] bytes = h.getBytes(Charset.defaultCharset());
         System.out.println(new BigInteger(1, bytes).toString(2));
-        System.out.println(Integer.toBinaryString(0xef));
+        System.out.println(Integer.toBinaryString(0xef));*/
+        System.out.println("orderGroup".hashCode() % 50);
     }
 }
